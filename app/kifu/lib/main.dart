@@ -21,12 +21,12 @@ class kifuApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primarySwatch: Colors.green,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      //initialRoute: HomePage(),
+      debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => WelcomePage(),
+        "/": (context) => HomePage(),
         MyRoutes.welcomeRoute2: (context) => WelcomePage2(),
         MyRoutes.welcomeRoute3: (context) => WelcomePage3(),
         MyRoutes.welcomeRoute4: (context) => WelcomePage4(),

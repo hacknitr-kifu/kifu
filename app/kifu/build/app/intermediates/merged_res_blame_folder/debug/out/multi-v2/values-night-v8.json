@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Desktop\\Github\\app\\kifu\\kifu\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\Desktop\\Github\\app\\kifu\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\Desktop\\Github\\app\\kifu\\kifu\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\Desktop\\Github\\app\\kifu\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
