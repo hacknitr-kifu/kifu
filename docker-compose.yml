@@ -1,1 +1,12 @@
-version "3.5"
+version: "3.5"
+
+services:
+  
+  roach:
+    image: cockroachdb/cockroach:latest
+    ports:
+      - "8080:8080"
+      - "26257:26257"
+    command: start-single-node --insecure
+    volumes:
+      - ./db/cockroach:/cockroach/cockroach-data
