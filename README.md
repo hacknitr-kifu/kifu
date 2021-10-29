@@ -1,1 +1,3 @@
-# KIFU
+# kifu
+
+entry for hackNITR-3 
