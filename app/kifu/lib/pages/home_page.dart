@@ -41,9 +41,27 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
               child: Container(
-                color: Colors.amber,
-                width: 500,
-                height: 200,
+                width: 450,
+                height: 20,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 70,
+                    ),
+                    Text("Let's help others!")
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+              child: Container(
+                color: Colors.lightGreen.shade900,
+                width: 450,
+                height: 150,
               ),
             ),
             SizedBox(
@@ -122,7 +140,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Container(
-                color: Colors.amber,
+                color: Colors.lightGreen.shade900,
                 width: 500,
                 height: 150,
               ),
