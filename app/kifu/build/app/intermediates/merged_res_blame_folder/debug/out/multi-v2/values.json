@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\OneDrive\\Flutter project\\kifu\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "D:\\Desktop\\Github\\app\\kifu\\kifu\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "D:\\OneDrive\\Flutter project\\kifu\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "D:\\Desktop\\Github\\app\\kifu\\kifu\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
