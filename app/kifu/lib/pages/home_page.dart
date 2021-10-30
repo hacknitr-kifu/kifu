@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                     ],
                   )),
                   width: 450,
-                  height: 150,
+                  height: 170,
                   child: Row(
                     children: [
                       Image.asset(
@@ -229,8 +229,8 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 40),
                     child: ElevatedButton(
                         onPressed: () {
                           Navigator.pushNamed(context, MyRoutes.scheduleRoute);
