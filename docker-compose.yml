@@ -1,12 +1,27 @@
 version: "3.5"
 
 services:
-  
   roach:
     image: cockroachdb/cockroach:latest
+    networks:
+      - backend
     ports:
       - "8080:8080"
-      - "26257:26257"
     command: start-single-node --insecure
+
     volumes:
       - ./db/cockroach:/cockroach/cockroach-data
+
+  # node:
+  #   build:
+  #     context: .
+  #   image: crazyaccess/kifu:latest
+  #   networks:
+  #     - backend
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./build:/usr/src/app
+
+networks:
+  backend:

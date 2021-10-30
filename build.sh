@@ -1,1 +1,0 @@
-echo "THE BUILD SCRIPT"
