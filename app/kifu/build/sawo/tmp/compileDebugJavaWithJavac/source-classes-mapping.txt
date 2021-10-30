@@ -1,2 +1,0 @@
-com/sawolabs/sawo/BuildConfig.java
- com.sawolabs.sawo.BuildConfig
