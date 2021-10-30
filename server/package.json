@@ -1,9 +1,12 @@
 {
   "name": "server",
   "version": "0.0.1",
+  "license": "MIT",
   "description": "Awesome project developed with TypeORM.",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
+    "@types/multer": "^1.4.7",
     "@types/node": "^8.0.29",
     "nodemon": "^2.0.14",
     "ts-node": "3.3.0",
@@ -11,7 +14,11 @@
   },
   "dependencies": {
     "body-parser": "^1.18.1",
+    "consola": "^2.15.3",
+    "dotenv": "^10.0.0",
     "express": "^4.15.4",
+    "multer": "^1.4.3",
+    "nft.storage": "^3.3.0",
     "pg": "^8.4.0",
     "reflect-metadata": "^0.1.10",
     "typeorm": "0.2.38"
