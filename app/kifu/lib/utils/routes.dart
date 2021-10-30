@@ -7,4 +7,5 @@ class MyRoutes {
   static String welcomeRoute4 = "/welcome4";
   static String scheduleRoute = "/schedule";
   static String imageRoute = "/image_classifier";
+  static String historyRoute = "/history";
 }

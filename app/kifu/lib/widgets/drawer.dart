@@ -90,6 +90,9 @@ class MyDrawer extends StatelessWidget {
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 textScaleFactor: 1.2,
               ),
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.historyRoute);
+              },
             ),
             ListTile(
               leading: Icon(

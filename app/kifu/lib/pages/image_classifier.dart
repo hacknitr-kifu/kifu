@@ -72,6 +72,7 @@ class _ImageClassifierState extends State<ImageClassifier> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawer(),
       appBar: AppBar(
         title: const Text('Image Classification'),
         backgroundColor: Colors.purple,
