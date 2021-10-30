@@ -3,6 +3,7 @@ import 'package:kifu/models/data.dart';
 import 'package:kifu/pages/cart.dart';
 import 'package:kifu/pages/image_classifier.dart';
 import 'package:kifu/pages/login_page.dart';
+import 'package:kifu/pages/redeem.dart';
 import 'package:kifu/pages/schedule.dart';
 import 'package:kifu/pages/user_profile.dart';
 import 'package:kifu/pages/welcome_page1.dart';
@@ -32,7 +33,7 @@ class kifuApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => UserProfile(),
+        "/": (context) => HomePage(),
         MyRoutes.welcomeRoute2: (context) => WelcomePage2(),
         MyRoutes.welcomeRoute3: (context) => WelcomePage3(),
         MyRoutes.welcomeRoute4: (context) => WelcomePage4(),
@@ -42,6 +43,7 @@ class kifuApp extends StatelessWidget {
         MyRoutes.imageRoute: (context) => ImageClassifier(),
         MyRoutes.historyRoute: (context) => UserProfile(),
         MyRoutes.cartRoute: (context) => CartScreen(),
+        MyRoutes.redeemRoute: (context) => RedeemPage(),
       },
     );
   }

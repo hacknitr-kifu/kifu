@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                             ElevatedButton(
                                 onPressed: () {
                                   Navigator.pushNamed(
-                                      context, MyRoutes.welcomeRoute2);
+                                      context, MyRoutes.redeemRoute);
                                 },
                                 style: TextButton.styleFrom(
                                   backgroundColor:
