@@ -1,0 +1,6 @@
+0 Apple
+1 banana
+2 book
+3 roti
+4 t-shirt
+5 jeans

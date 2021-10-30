@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kifu/pages/image_classifier.dart';
 import 'package:kifu/pages/login_page.dart';
 import 'package:kifu/pages/schedule.dart';
 import 'package:kifu/pages/welcome_page1.dart';
@@ -34,6 +35,7 @@ class kifuApp extends StatelessWidget {
         MyRoutes.loginRoute: (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.scheduleRoute: (context) => SchedulePage(),
+        MyRoutes.imageRoute: (context) => ImageClassifier()
       },
     );
   }

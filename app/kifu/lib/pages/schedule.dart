@@ -62,7 +62,9 @@ class _SchedulePageState extends State<SchedulePage> {
                     height: 10,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, MyRoutes.imageRoute);
+                    },
                     child: Wrap(
                       children: <Widget>[
                         Icon(
