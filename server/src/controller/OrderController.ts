@@ -52,7 +52,7 @@ export class OrderController {
     try {
       const order = this.orderRepository.findOne(request.params.id);
 
-      const deleted_order = await this.orderRepository.remove(await order);
+      await this.orderRepository.remove(await order);
 
       return order;
     } catch (err) {
