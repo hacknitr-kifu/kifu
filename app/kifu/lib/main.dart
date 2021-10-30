@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kifu/pages/login_page.dart';
+import 'package:kifu/pages/schedule.dart';
 import 'package:kifu/pages/welcome_page1.dart';
 import 'package:kifu/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,11 +27,13 @@ class kifuApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => HomePage(),
+        "/": (context) => SchedulePage(),
         MyRoutes.welcomeRoute2: (context) => WelcomePage2(),
         MyRoutes.welcomeRoute3: (context) => WelcomePage3(),
         MyRoutes.welcomeRoute4: (context) => WelcomePage4(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.scheduleRoute: (context) => SchedulePage(),
       },
     );
   }

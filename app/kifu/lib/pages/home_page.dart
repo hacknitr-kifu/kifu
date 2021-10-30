@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kifu/models/user_data.dart';
 import 'package:kifu/utils/routes.dart';
 import 'package:kifu/widgets/drawer.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class HomePage extends StatefulWidget {
   // UserData userData;
@@ -14,6 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final name = "Raghav ";
   int _value = 0;
+  final points = 547;
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +61,73 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
               child: Container(
-                color: Colors.lightGreen.shade900,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.lightGreen.shade800,
+                    Colors.white,
+                  ],
+                  stops: [
+                    0.3,
+                    0.9,
+                  ],
+                )),
                 width: 450,
                 height: 150,
+                child: Row(
+                  children: [
+                    Image.asset(
+                      "assets/images/money.png",
+                    ),
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Your Points",
+                            style: TextStyle(
+                                fontFamily: GoogleFonts.lato().fontFamily,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 18),
+                          ),
+                          Text(
+                            "$points",
+                            style: TextStyle(
+                              fontFamily: GoogleFonts.lato().fontFamily,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromRGBO(255, 224, 0, 1),
+                              fontSize: 53,
+                            ),
+                          ),
+                          ElevatedButton(
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                    context, MyRoutes.welcomeRoute2);
+                              },
+                              style: TextButton.styleFrom(
+                                backgroundColor: Color.fromRGBO(62, 92, 85, 1),
+                                minimumSize: Size(60, 30),
+                              ),
+                              child: Text(
+                                "Redeem",
+                                style: TextStyle(
+                                  fontFamily: GoogleFonts.lato().fontFamily,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                ),
+                              )),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(
@@ -153,7 +219,7 @@ class _HomePageState extends State<HomePage> {
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, MyRoutes.welcomeRoute2);
+                        Navigator.pushNamed(context, MyRoutes.scheduleRoute);
                       },
                       style: TextButton.styleFrom(
                           backgroundColor: Color.fromRGBO(62, 92, 85, 1)),

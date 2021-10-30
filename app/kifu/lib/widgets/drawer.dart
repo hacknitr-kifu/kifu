@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kifu/pages/home_page.dart';
 import 'package:kifu/pages/login_page.dart';
 import 'package:kifu/utils/routes.dart';
 
@@ -59,6 +60,9 @@ class MyDrawer extends StatelessWidget {
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 textScaleFactor: 1.2,
               ),
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.homeRoute);
+              },
             ),
             ListTile(
               leading: Icon(
@@ -71,6 +75,9 @@ class MyDrawer extends StatelessWidget {
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 textScaleFactor: 1.2,
               ),
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.scheduleRoute);
+              },
             ),
             ListTile(
               leading: Icon(
