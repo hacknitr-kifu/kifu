@@ -1,48 +1,17 @@
 import 'reflect-metadata';
+import consola from 'consola';
 import { createConnection } from 'typeorm';
-import express, { Request, Response } from 'express';
-import { User } from './entity/User';
-import { Routes } from './routes';
+import { config } from 'dotenv';
+import app from './app';
 
-createConnection()
-  .then(async connection => {
-    // create express app
-    const app = express();
-    app.use(express.json());
+config();
+consola.info('Loaded .ENV');
+createConnection().then(() => consola.info('Connected To Rodent'));
 
-    // register express routes from defined application routes
-    Routes.forEach(route => {
-      (app as any)[route.method](
-        route.route,
-        (req: Request, res: Response, next: Function) => {
-          const result = new (route.controller as any)()[route.action](
-            req,
-            res,
-            next
-          );
-          if (result instanceof Promise) {
-            result.then(result =>
-              result !== null && result !== undefined
-                ? res.send(result)
-                : undefined
-            );
-          } else if (result !== null && result !== undefined) {
-            res.json(result);
-          }
-        }
-      );
-    });
+async function main() {
+  app.listen(process.env.PORT, () =>
+    consola.info(`SERVER STARTED AT ${process.env.PORT}`)
+  );
+}
 
-    app.listen(80);
-
-    // await connection.manager.save(
-    //   connection.manager.create(User, {
-    //     name: 'Ansh Bhalala',
-    //     created_on: `${Date.now()}`,
-    //     age: 17,
-    //   })
-    // );
-
-    console.log('On port 80');
-  })
-  .catch(error => console.log(error));
+main();
