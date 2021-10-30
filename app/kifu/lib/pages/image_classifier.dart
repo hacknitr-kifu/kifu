@@ -52,7 +52,6 @@ class _ImageClassifierState extends State<ImageClassifier> {
     );
     setState(() {
       _loading = false;
-      //Declare List _outputs in the class which will be used to show the classified classs name and confidence
       _outputs = output;
     });
   }
@@ -74,40 +73,54 @@ class _ImageClassifierState extends State<ImageClassifier> {
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
-        title: const Text('Image Classification'),
-        backgroundColor: Colors.purple,
+        title: const Text('Add items'),
+        backgroundColor: Colors.green,
       ),
-      body: _loading
-          ? Container(
-              alignment: Alignment.center,
-              child: CircularProgressIndicator(),
-            )
-          : Container(
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _image == null ? Container() : Image.file(File(_image!.path)),
-                  SizedBox(
-                    height: 200,
-                  ),
-                  _outputs != null
-                      ? Text(
-                          '${_outputs![0]["label"]}',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20.0,
-                            background: Paint()..color = Colors.white,
-                          ),
-                        )
-                      : Container()
-                ],
+      body: SingleChildScrollView(
+        child: _loading
+            ? Container(
+                alignment: Alignment.center,
+                child: CircularProgressIndicator(),
+              )
+            : Container(
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _image == null
+                        ? Container()
+                        : Image.file(File(_image!.path)),
+                    SizedBox(
+                      height: 200,
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.cartRoute);
+                      },
+                      child: Text('Click here to add this item to cart'),
+                    ),
+                    _outputs != null
+                        ? Text(
+                            '${_outputs![0]["label"]}',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20.0,
+                              background: Paint()..color = Colors.white,
+                            ),
+                          )
+                        : Container()
+                  ],
+                ),
               ),
-            ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _optiondialogbox,
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.lightGreen,
         child: Icon(Icons.image),
       ),
     );
@@ -119,7 +132,7 @@ class _ImageClassifierState extends State<ImageClassifier> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            backgroundColor: Colors.purple,
+            backgroundColor: Colors.green,
             content: SingleChildScrollView(
               child: ListBody(
                 children: <Widget>[

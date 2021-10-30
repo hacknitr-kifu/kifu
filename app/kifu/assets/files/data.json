@@ -1,0 +1,30 @@
+{
+    "users":[
+        {  
+            "id": 1,
+            "name": "Sarthak Aggarwal",
+            "age": 18,
+            "points": 0,
+            "timesDonated": 89,
+            "type": "individual",
+            "createdOn": "2021-10-30T19:20:41.768Z"},
+        {
+            "id": 2,
+            "name": "Sarthak Aggarwal",
+            "age": 18,
+            "points": 0,
+            "timesDonated": 89,
+            "type": "individual",
+            "createdOn": "2021-10-30T19:20:41.768Z"},
+        
+        {
+            "id": 3,
+            "name": "Sarthak Aggarwal",
+            "age": 18,
+            "points": 0,
+            "timesDonated": 89,
+            "type": "individual",
+            "createdOn": "2021-10-30T19:20:41.768Z"}
+        
+    ]
+}

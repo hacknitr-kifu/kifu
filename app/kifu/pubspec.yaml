@@ -27,7 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  http: <latest_version>
+  http:
   image_picker:
   tflite: ^1.1.1
   meta: ^1.1.1
@@ -76,6 +76,12 @@ flutter:
     - assets/images/
     - assets/labels.txt
     - assets/model_unquant.tflite
+<<<<<<< Updated upstream
+
+=======
+    - assets/files/
+>>>>>>> Stashed changes
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

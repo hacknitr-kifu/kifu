@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kifu/models/data.dart';
+import 'package:kifu/pages/cart.dart';
 import 'package:kifu/pages/image_classifier.dart';
 import 'package:kifu/pages/login_page.dart';
 import 'package:kifu/pages/schedule.dart';
@@ -39,7 +40,8 @@ class kifuApp extends StatelessWidget {
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.scheduleRoute: (context) => SchedulePage(),
         MyRoutes.imageRoute: (context) => ImageClassifier(),
-        MyRoutes.historyRoute: (context) => UserProfile()
+        MyRoutes.historyRoute: (context) => UserProfile(),
+        MyRoutes.cartRoute: (context) => CartScreen(),
       },
     );
   }

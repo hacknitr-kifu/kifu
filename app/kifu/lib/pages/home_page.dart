@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kifu/models/user_data.dart';
 import 'package:kifu/utils/routes.dart';
 import 'package:kifu/widgets/drawer.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'dart:convert';
+import 'package:kifu/models/data.dart';
 
 class HomePage extends StatefulWidget {
   // UserData userData;
@@ -17,11 +20,35 @@ class _HomePageState extends State<HomePage> {
   final name = "Raghav ";
   int _value = 0;
   final points = 547;
+  List<Marker> allMarkers = [];
 
-  static const _initialCameraPosition = CameraPosition(
-    target: LatLng(28.4595, 77.0266),
-    zoom: 11.5,
-  );
+  @override
+  void initState() {
+    allMarkers.add(Marker(
+      markerId: MarkerId('marker1'),
+      draggable: false,
+      onTap: () {
+        print("marker tapped");
+      },
+      position: LatLng(28.461861, 77.030449),
+    ));
+    allMarkers.add(Marker(
+      markerId: MarkerId('marker2'),
+      draggable: false,
+      onTap: () {
+        print("marker tapped");
+      },
+      position: LatLng(28.461999893188477, 77.03533935546875),
+    ));
+    allMarkers.add(Marker(
+      markerId: MarkerId('marker3'),
+      draggable: false,
+      onTap: () {
+        print("marker tapped");
+      },
+      position: LatLng(28.440292358398438, 77.05552673339844),
+    ));
+  }
 
   late GoogleMapController _googleMapController;
 
@@ -225,10 +252,13 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Container(
                   child: GoogleMap(
-                    myLocationButtonEnabled: false,
-                    zoomControlsEnabled: false,
-                    initialCameraPosition: _initialCameraPosition,
-                  ),
+                      myLocationButtonEnabled: false,
+                      zoomControlsEnabled: false,
+                      initialCameraPosition: CameraPosition(
+                        target: LatLng(28.4595, 77.0266),
+                        zoom: 11.5,
+                      ),
+                      markers: Set.from(allMarkers)),
                   width: 500,
                   height: 150,
                 ),
