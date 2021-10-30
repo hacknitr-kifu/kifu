@@ -1,0 +1,4 @@
+#Sat Oct 30 12:45:16 IST 2021
+base.0=D\:\\Development\\kifu\\app\\kifu\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

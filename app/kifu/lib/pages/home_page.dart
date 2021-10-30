@@ -4,6 +4,7 @@ import 'package:kifu/models/user_data.dart';
 import 'package:kifu/utils/routes.dart';
 import 'package:kifu/widgets/drawer.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class HomePage extends StatefulWidget {
   // UserData userData;
@@ -16,6 +17,11 @@ class _HomePageState extends State<HomePage> {
   final name = "Raghav ";
   int _value = 0;
   final points = 547;
+
+  static const _initialCameraPosition = CameraPosition(
+    target: LatLng(28.4595, 77.0266),
+    zoom: 11.5,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -206,7 +212,11 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Container(
-                color: Colors.lightGreen.shade900,
+                child: GoogleMap(
+                  myLocationButtonEnabled: false,
+                  zoomControlsEnabled: false,
+                  initialCameraPosition: _initialCameraPosition,
+                ),
                 width: 500,
                 height: 150,
               ),
