@@ -21,6 +21,7 @@ class _SchedulePageState extends State<SchedulePage> {
   Widget build(BuildContext context) {
     String _chosenValue = "hi";
     double width = MediaQuery.of(context).size.width;
+    String dropdownValue = "Select item";
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -114,8 +115,48 @@ class _SchedulePageState extends State<SchedulePage> {
             ),
             Expanded(
                 child: Container(
-              color: Colors.blueGrey,
-              child: Column(children: []),
+              color: Colors.white,
+              child: Row(
+                children: [
+                  Container(
+                    width: 300,
+                    child: Padding(
+                        padding: const EdgeInsets.fromLTRB(100, 0, 0, 50),
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          value: dropdownValue,
+                          icon: const Icon(Icons.arrow_downward),
+                          iconSize: 34,
+                          elevation: 16,
+                          style: const TextStyle(color: Colors.black),
+                          underline: Container(
+                            height: 2,
+                            color: Colors.green,
+                          ),
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              dropdownValue = newValue!;
+                            });
+                          },
+                          items: <String>[
+                            'Select item',
+                            'Asparagus',
+                            'Apple',
+                            'Avocado',
+                            'Banana',
+                            'Bread',
+                            'Book',
+                          ].map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
+                        )),
+                  ),
+                  Column(children: []),
+                ],
+              ),
               width: width,
             )),
           ],
