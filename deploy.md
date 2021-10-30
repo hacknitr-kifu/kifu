@@ -2,10 +2,10 @@
 
 ## First Steps
 
-Get a server (vps)
+Get a server (VPS)
 
-Best place to get it maybe [Linode](https://www.linode.com/promotions).
-They even have a promotion 100$ credit.
+We have used one from [Linode](https://www.linode.com/promotions).
+(promotional 100$ credit)
 
 > **Recomended** : Get an Ubuntu 20.04 LTS Linode of arround 2GB and 1 Compute unit.
 
@@ -80,4 +80,4 @@ tmux
 node dist
 ```
 
-> # Congratualtions the api is deployed
+> # Congratualtions the API is deployed
