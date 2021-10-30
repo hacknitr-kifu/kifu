@@ -1,6 +1,7 @@
+*an entry for HackNITR 3.0*
+
 # kifu.
 
-entry for hackNITR-3 
 
 
 Donating made easy, the kifu. way
@@ -9,9 +10,22 @@ Donating made easy, the kifu. way
 
 Refer to deployment.md
 
-## Usage
+## Technologies used
+
+1. Flutter
+2. TensorFlow Lite
+3. Google Maps API
+4. nginx
+5. CockroachDB
+6. Docker
+7. Linode
+8. TypeORM
+9. TypeScript
+10. Filecoin (?)
+11. 
 
 
+*attach flowchart*
 
 
 ## Contributing
