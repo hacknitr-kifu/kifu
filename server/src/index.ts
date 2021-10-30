@@ -1,21 +1,48 @@
-import "reflect-metadata";
-import {createConnection} from "typeorm";
-import {User} from "./entity/User";
+import 'reflect-metadata';
+import { createConnection } from 'typeorm';
+import express, { Request, Response } from 'express';
+import { User } from './entity/User';
+import { Routes } from './routes';
 
-createConnection().then(async connection => {
+createConnection()
+  .then(async connection => {
+    // create express app
+    const app = express();
+    app.use(express.json());
 
-    console.log("Inserting a new user into the database...");
-    const user = new User();
-    user.firstName = "Timber";
-    user.lastName = "Saw";
-    user.age = 25;
-    await connection.manager.save(user);
-    console.log("Saved a new user with id: " + user.id);
+    // register express routes from defined application routes
+    Routes.forEach(route => {
+      (app as any)[route.method](
+        route.route,
+        (req: Request, res: Response, next: Function) => {
+          const result = new (route.controller as any)()[route.action](
+            req,
+            res,
+            next
+          );
+          if (result instanceof Promise) {
+            result.then(result =>
+              result !== null && result !== undefined
+                ? res.send(result)
+                : undefined
+            );
+          } else if (result !== null && result !== undefined) {
+            res.json(result);
+          }
+        }
+      );
+    });
 
-    console.log("Loading users from the database...");
-    const users = await connection.manager.find(User);
-    console.log("Loaded users: ", users);
+    app.listen(80);
 
-    console.log("Here you can setup and run express/koa/any other framework.");
+    // await connection.manager.save(
+    //   connection.manager.create(User, {
+    //     name: 'Ansh Bhalala',
+    //     created_on: `${Date.now()}`,
+    //     age: 17,
+    //   })
+    // );
 
-}).catch(error => console.log(error));
+    console.log('On port 80');
+  })
+  .catch(error => console.log(error));

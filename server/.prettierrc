@@ -1,0 +1,7 @@
+{
+  "arrowParens": "avoid",
+  "semi": true,
+  "bracketSpacing": true,
+  "proseWrap": "preserve",
+  "singleQuote": true
+}
