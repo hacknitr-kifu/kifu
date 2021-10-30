@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:kifu/models/data.dart';
 import 'package:kifu/models/user_data.dart';
 import 'package:kifu/utils/routes.dart';
 import 'package:kifu/widgets/drawer.dart';
@@ -31,12 +31,10 @@ class _UserProfileState extends State<UserProfile> {
           ),
         ),
       ),
-      // body: ListView.builder(
-      // itemCount: UserModel.userdata.length,
-      //itemBuilder: (context, index) {
-      //  return
-      // },
-      // ),
+      body: ListView.builder(
+        itemCount: UserModel.userdata.length,
+        itemBuilder: (context, index) {},
+      ),
     );
   }
 }
