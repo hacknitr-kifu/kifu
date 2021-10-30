@@ -7,6 +7,7 @@ import 'package:kifu/models/user_data.dart';
 import 'package:kifu/pages/home_page.dart';
 import 'dart:math' as math;
 import 'package:kifu/widgets/drawer.dart';
+import 'package:flutter/cupertino.dart';
 
 class SchedulePage extends StatefulWidget {
   const SchedulePage({Key? key}) : super(key: key);
@@ -48,7 +49,7 @@ class _SchedulePageState extends State<SchedulePage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: Text(
-                      "Scan your food items with the camera icon on the top right",
+                      "Scan your food items with the camera",
                       style: TextStyle(
                         fontFamily: GoogleFonts.lato().fontFamily,
                         fontWeight: FontWeight.bold,
@@ -56,7 +57,22 @@ class _SchedulePageState extends State<SchedulePage> {
                         fontSize: 14,
                       ),
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Wrap(
+                      children: <Widget>[
+                        Icon(
+                          CupertinoIcons.camera,
+                          color: Colors.white,
+                          size: 24.0,
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             )),
