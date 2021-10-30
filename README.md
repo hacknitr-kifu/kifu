@@ -48,3 +48,10 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
+### Team
+1. Sarthak Aggarwal - ML, Google Maps API, front-end and back-end integration
+2. Raghav Agrawal - front-end
+3. Aaditya Rathore - design, user research
+4. Ansh Bhalala - back-end
