@@ -232,30 +232,6 @@ class _HomePageState extends State<HomePage> {
                   width: 500,
                   height: 150,
                 ),
-<<<<<<< Updated upstream
-=======
-              ],
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Container(
-                child: Stack(children: [
-                  GoogleMap(
-                    myLocationButtonEnabled: false,
-                    zoomControlsEnabled: false,
-                    initialCameraPosition: _initialCameraPosition,
-                  ),
-                  FloatingActionButton(
-                      onPressed: () => _googleMapController.animateCamera(
-                          CameraUpdate.newCameraPosition(
-                              _initialCameraPosition)))
-                ]),
-                width: 500,
-                height: 150,
->>>>>>> Stashed changes
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
