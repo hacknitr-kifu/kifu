@@ -37,7 +37,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-
+        <!-- Required to fetch data from the internet. -->
+        <uses-permission android:name="android.permission.INTERNET" />
             <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyC-1JO_oL66S25yj0qpvHUOD4Z9ChaRFSc"/>
