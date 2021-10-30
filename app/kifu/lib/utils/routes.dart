@@ -8,4 +8,5 @@ class MyRoutes {
   static String scheduleRoute = "/schedule";
   static String imageRoute = "/image_classifier";
   static String historyRoute = "/history";
+  static String cartRoute = "/cart";
 }
