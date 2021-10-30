@@ -6,6 +6,9 @@ import 'package:kifu/utils/routes.dart';
 import 'package:kifu/widgets/drawer.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:kifu/widgets/item_widget.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
 class UserProfile extends StatefulWidget {
   const UserProfile({Key? key}) : super(key: key);
@@ -14,32 +17,52 @@ class UserProfile extends StatefulWidget {
   _UserProfileState createState() => _UserProfileState();
 }
 
+Future<http.Response> fetchAlbum() {
+  return http.get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
+}
+
 class _UserProfileState extends State<UserProfile> {
   @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() async {
+    final dataJson = await rootBundle.loadString("assets/files/data.json");
+    final decodedData = jsonDecode(dataJson);
+    final productsData = decodedData["users"];
+    UserModel.userdata = List.from(productsData)
+        .map<Item>((item) => Item.fromMap(item))
+        .toList();
+    setState(() {});
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(5, (index) => UserModel.userdata[0]);
     return Scaffold(
-      drawer: MyDrawer(),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
-        title: Text(
-          "Donations 💵",
-          style: TextStyle(
-            fontFamily: GoogleFonts.lato().fontFamily,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-            fontSize: 25,
+        drawer: MyDrawer(),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          iconTheme: IconThemeData(color: Colors.black),
+          title: Text(
+            "Donations 💵",
+            style: TextStyle(
+              fontFamily: GoogleFonts.lato().fontFamily,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+              fontSize: 25,
+            ),
           ),
         ),
-      ),
-      body: ListView.builder(
-        itemCount: dummyList.length,
-        itemBuilder: (context, index) {
-          return ItemWidget(item: dummyList[index]);
-        },
-      ),
-    );
+        body: (UserModel.userdata != null && UserModel.userdata.isNotEmpty)
+            ? ListView.builder(
+                itemCount: UserModel.userdata.length,
+                itemBuilder: (context, index) =>
+                    ItemWidget(item: UserModel.userdata[index]))
+            : Center(
+                child: CircularProgressIndicator(),
+              ));
   }
 }

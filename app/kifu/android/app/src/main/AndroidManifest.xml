@@ -37,8 +37,12 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+<<<<<<< Updated upstream
         <!-- Required to fetch data from the internet. -->
        
+=======
+        
+>>>>>>> Stashed changes
             <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyAN8vzJ6tep30U3SU5YPDwikQxmzWq3Neo"/>

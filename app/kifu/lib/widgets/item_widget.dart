@@ -15,7 +15,7 @@ class ItemWidget extends StatelessWidget {
         title: Text(item.name),
         subtitle: Text("Age:  ${item.age}"),
         trailing: Text(
-          "Donations: ${item.donation_count}",
+          "Donations: ${item.timesDonated}",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
