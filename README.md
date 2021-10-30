@@ -8,7 +8,7 @@ Donating made easy, the kifu. way
 
 ## Installation
 
-Refer to deploy.md  [{https://github.com/hacknitr-kifu/kifu/blob/main/deploy.md}]
+Refer to [deploy.md](https://github.com/hacknitr-kifu/kifu/blob/main/deploy.md)
 
 
 ## The Problem  
