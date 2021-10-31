@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
       draggable: false,
       onTap: () {
         print("marker tapped");
-      },
+      }
       position: LatLng(28.461999893188477, 77.03533935546875),
     ));
     allMarkers.add(Marker(

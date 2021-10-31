@@ -10,7 +10,7 @@ class last extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, MyRoutes.homeRoute);
       }, // handle your image tap here
-      child: Image.asset(
+      child: Image.asset( 
         'assets/one.png',
         // fit: BoxFit.cover, // this is the solution for border
         // width: 100.0,
