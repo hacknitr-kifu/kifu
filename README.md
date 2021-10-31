@@ -49,10 +49,12 @@ You can also earn points by donating and redeem them to avail discounts, get gif
 
 ---
 
-<img src="
-https://i.imgur.com/WlRDU4F.png
-">
-
+<p align="center">
+  <a href="https://www.getkifu.co/">
+    <img alt="kifu-flow" src="https://i.imgur.com/WlRDU4F.png
+" width="720">
+  </a>
+</p>
 ## Prototype
 
 https://www.figma.com/proto/s5MW2bFvqDdfw0bnHS4qrZ/kifu.?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1
