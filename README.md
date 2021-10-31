@@ -49,6 +49,8 @@ You can also earn points by donating and redeem them to avail discounts, get gif
 
 ---
 
+## Flowchart
+
 <p align="center">
   <a href="https://www.getkifu.co/">
     <img alt="kifu-flow" src="https://i.imgur.com/YVDeYDg.png" width="720">
