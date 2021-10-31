@@ -30,8 +30,8 @@ You can also earn points by donating and redeem them to avail discounts, get gif
 7. Linode
 8. TypeORM
 9. TypeScript
-10. Filecoin (?)
-11. 
+10. NFT.Storage(Filecoin)
+
 
 
 *attach flowchart*
