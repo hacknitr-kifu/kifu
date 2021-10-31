@@ -17,52 +17,55 @@ class UserProfile extends StatefulWidget {
   _UserProfileState createState() => _UserProfileState();
 }
 
-Future<http.Response> fetchAlbum() {
-  return http.get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
-}
+// Future<http.Response> fetchAlbum() {
+//   return http.get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
+// }
 
 class _UserProfileState extends State<UserProfile> {
   @override
-  void initState() {
-    super.initState();
-    loadData();
-  }
+  // void initState() {
+  //   super.initState();
+  //   loadData();
+  // }
 
-  loadData() async {
-    final dataJson = await rootBundle.loadString("assets/files/data.json");
-    final decodedData = jsonDecode(dataJson);
-    final productsData = decodedData["users"];
-    UserModel.userdata = List.from(productsData)
-        .map<Item>((item) => Item.fromMap(item))
-        .toList();
-    setState(() {});
-  }
+  // loadData() async {
+  //   final dataJson = await rootBundle.loadString("assets/files/data.json");
+  //   final decodedData = jsonDecode(dataJson);
+  //   final productsData = decodedData["users"];
+  //   UserModel.userdata = List.from(productsData)
+  //       .map<Item>((item) => Item.fromMap(item))
+  //       .toList();
+  //   setState(() {});
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: MyDrawer(),
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black),
-          title: Text(
-            "Donations 💵",
-            style: TextStyle(
-              fontFamily: GoogleFonts.lato().fontFamily,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-              fontSize: 25,
-            ),
+      drawer: MyDrawer(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        iconTheme: IconThemeData(color: Colors.black),
+        title: Text(
+          "Donations 💵",
+          style: TextStyle(
+            fontFamily: GoogleFonts.lato().fontFamily,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+            fontSize: 25,
           ),
         ),
-        body: (UserModel.userdata != null && UserModel.userdata.isNotEmpty)
-            ? ListView.builder(
-                itemCount: UserModel.userdata.length,
-                itemBuilder: (context, index) =>
-                    ItemWidget(item: UserModel.userdata[index]))
-            : Center(
-                child: CircularProgressIndicator(),
-              ));
+      ),
+      body: ListView.builder(
+        itemBuilder: (context, index) => Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+                children: <Widget>[Text('Note Title'), Text('Note Text')]),
+          ),
+        ),
+        itemCount: 50,
+      ),
+    );
   }
 }

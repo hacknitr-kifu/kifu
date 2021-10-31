@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
       draggable: false,
       onTap: () {
         print("marker tapped");
-      },
+      }
       position: LatLng(28.461999893188477, 77.03533935546875),
     ));
     allMarkers.add(Marker(
@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                             ElevatedButton(
                                 onPressed: () {
                                   Navigator.pushNamed(
-                                      context, MyRoutes.welcomeRoute2);
+                                      context, MyRoutes.redeemRoute);
                                 },
                                 style: TextButton.styleFrom(
                                   backgroundColor:

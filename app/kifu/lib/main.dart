@@ -3,7 +3,9 @@ import 'package:kifu/models/data.dart';
 import 'package:kifu/pages/cart.dart';
 import 'package:kifu/pages/image_classifier.dart';
 import 'package:kifu/pages/login_page.dart';
+import 'package:kifu/pages/redeem.dart';
 import 'package:kifu/pages/schedule.dart';
+import 'package:kifu/pages/set_time.dart';
 import 'package:kifu/pages/user_profile.dart';
 import 'package:kifu/pages/welcome_page1.dart';
 import 'package:kifu/utils/routes.dart';
@@ -14,6 +16,8 @@ import 'package:kifu/pages/welcome_page4.dart';
 import 'package:kifu/pages/home_page.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:http/http.dart' as http;
+import 'package:kifu/pages/thank.dart';
+import 'package:kifu/pages/last.dart';
 
 void main() {
   runApp(kifuApp());
@@ -32,7 +36,7 @@ class kifuApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => UserProfile(),
+        "/": (context) => WelcomePage(),
         MyRoutes.welcomeRoute2: (context) => WelcomePage2(),
         MyRoutes.welcomeRoute3: (context) => WelcomePage3(),
         MyRoutes.welcomeRoute4: (context) => WelcomePage4(),
@@ -42,6 +46,10 @@ class kifuApp extends StatelessWidget {
         MyRoutes.imageRoute: (context) => ImageClassifier(),
         MyRoutes.historyRoute: (context) => UserProfile(),
         MyRoutes.cartRoute: (context) => CartScreen(),
+        MyRoutes.redeemRoute: (context) => RedeemPage(),
+        MyRoutes.timeRoute: (context) => set_time(),
+        MyRoutes.thankRoute: (context) => thank(),
+        MyRoutes.lastRoute: (context) => last(),
       },
     );
   }

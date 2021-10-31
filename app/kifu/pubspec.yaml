@@ -76,11 +76,10 @@ flutter:
     - assets/images/
     - assets/labels.txt
     - assets/model_unquant.tflite
-<<<<<<< Updated upstream
-
-=======
     - assets/files/
->>>>>>> Stashed changes
+    - assets/one.png
+    - assets/two.png
+    - assets/three.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
