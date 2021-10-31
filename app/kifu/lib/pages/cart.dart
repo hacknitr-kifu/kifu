@@ -135,7 +135,7 @@ class _CartScreenState extends State<CartScreen> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, MyRoutes.scheduleRoute);
+                    Navigator.pushNamed(context, MyRoutes.timeRoute);
                   },
                   style: TextButton.styleFrom(
                       backgroundColor: Color.fromRGBO(62, 92, 85, 1),
